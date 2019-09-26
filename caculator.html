@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .menubar {border: 1px solid#f1f1f1; background-color: gainsboro; height: 60px; margin-top: 70px;  }
+    .menubar a {text-decoration: none; font-size: 28px; margin-right: 38px; font-family: "Nanum Barun Gothic", "나눔고딕", "NanumGothic", "돋움", "Dotum", sans-serif; color: #555;}
+    .login {float:right;}
+    a:hover {background-color: lightcyan;}
+     
+    .sns {border: 1px solid#f1f1f1; text-align: center; background-color: #fafafa; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: #555; } 
+   
+    .sns a {font-size: 25px; text-decoration: none; margin: 50px; color:#555;}
+   
+
+    .menubar li ul {display: none;}
+    
+    .menubar li:hover ul {display: block; width: 200px; background-color: gainsboro; position: absolute; z-index: 10; left:185px; top:195px; }
+
+    .menubar ul li {float:left; }
+
+    /* 계산기 */
+   
+    body .calc {background-image: url("../myhome/img/다운로.jpg");
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding-top: 100px; }
+
+    table {border-collapse:collapse;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 350px;
+        text-align: center;
+        margin-bottom: 200px;
+        margin-top: 150px;
+        font-size: 20px;
+        border: none;
+        
+        
+    }
+    td {background-color: #555;border: 1px solid#fafafa;}
+    td:hover {background-color: orange;}
+    </style>
+</head>
+<body>
+    <h1>SEOK KI portfolio</h1>
+
+    <div class="menubar">
+        <ul>
+      <li>  <a href="../0923/0923.html" ><i class="fa fa-home">Home</i></a> </li>
+       
+
+      <li>  <a href="../0923/about.html" id="about"><i class="fa fa-address-card"></i>About</a>
+        <ul>
+         <li><a href="#">Block chain</a></li>
+         
+         <li><a href="#">Web Publisher</a></li>
+
+        </ul>
+      </li>
+        <li><a href="../0923/caculator.html"><i class="fa fa-calculator"></i>Caculator</a></li>
+        <li><a href="../0923/information.html"><i class="fa fa-info-circle"></i>Information</a></li>
+        <div class="login">
+                <a href="../0923/login.html">Login</a>
+               </div>
+            </ul>
+    </div>
+    
+
+</div>
+<h1 style="text-align: center">My Caculator</h1>
+<div class="back">
+
+</div>
+
+<div class="calc">
+    <table border="1">
+ 
+<tr>
+<td colspan="4">
+<input type="text" id="display" placeholder="계산할 값을 입력해주세요." style="font-size: large">
+</td>
+</tr>
+<tr>
+<td colspan="4">
+<input type="text" id="result" placeholder="결과가 출력됩니다." style="font-size: large" >
+</td>
+</tr>
+<tr>
+<td colspan="3" onclick="reset()">AC</td>
+<td onclick="add('/')">÷</td>
+</tr>
+<tr>
+<td onclick="add(7)">7</td>
+<td onclick="add(8)">8</td>
+<td onclick="add(9)">9</td>
+<td onclick="add('*')">*</td>
+</tr>
+<tr>
+<td onclick="add(4)">4</td>
+<td onclick="add(5)">5</td>
+<td onclick="add(6)">6</td>
+<td onclick="add('-')">-</td>
+</tr>
+<tr>
+    <td onclick="add(1)">1</td>
+    <td onclick="add(2)">2</td>
+    <td onclick="add(3)">3</td>
+    <td onclick="add('+')">+</td>
+</tr>
+<tr>
+<td colspan="2">0</td>
+<td onclick="add('.')">.</td>
+<td onclick="calculate('=')">=</td>
+</tr>
+
+</table>
+</div>
+
+<script>
+function add(char) {
+var display=document.getElementById('display'); //식을 입력할 input태그를 불러옴.
+display.value = display.value + char;   //add함수의 역할=식뒤에 내가누른 숫자나 기호를 추가해줌.
+//input태그는 value라는 속성에 저장됨 document.getElementById('display')=<input>태그를 불러오는 코드이고 .value를 붙임으로서
+// <input>태그의 값을 가져온다.
+}
+function calculate() {
+var display = document.getElementById('display');
+var result = eval(display.value); //식을 계산하고 result변수에 저장합니다.
+document.getElementById('result').value = result;      //?
+}
+function reset() {
+display1 = document.getElementById('display').value="";
+display2 = document.getElementById('result').value="";
+}
+
+
+</script>
+
+    <!-- 계산기 넣을곳 -->
+    
+        <div class="sns">
+          <h2>SNS</h2>
+          <a href=""><i class="fa fa-instagram">.</i></a>
+          
+          <a href=""><i class="fa fa-comments">.</i></a>
+
+          <a href=""><i class="fa fa-facebook-f">.</i></a>
+
+          <a href=""><i class="fa fa-youtube">.</i></a>
+
+
+        </div>
+       
+        <div class="footer">
+         <p>TEL:010-4163-5841</p>
+         <a href="#"><i class="fa fa-instagram">suuuuuucki</i></a>
+        </div>
+       
+
+   
+</body>
+</html>
