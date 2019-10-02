@@ -52,36 +52,127 @@
     body #txt {float:right;  font-size: 30px; font-family: 'Mansalva', cursive; }
     .content img {width: 750px; height: 550px; margin-left: auto; margin-right: auto; margin-top: 150px;}
     .content h3 {text-align: center; font-family:'Roboto Mono', monospace; font-size: 20px;}
+    .content i {font-size: 40px; padding-left: 750px;}
     @media (max-width: 560px) {
-      
+      .menubar { }
+    .login {}
+    a:hover { }
+     
+    .sns { } 
+   
+    .sns a {font-size: 25px; text-decoration: none; margin: 50px; color:#555;}
+    .content {margin-top: 50px;}
+
+    .menubar li ul {display: none; }
+    
+    .menubar li:hover ul {display: block; width: 200px; background-color: gainsboro; position: absolute; z-index: 10; left:185px; top:190px; margin-bottom: 10px; }
+
+    .menubar ul li {float:left;}
+    
+    .menubar li:hover ul a {font-size: 18px; margin-top: 50px;}
+
+    .menubar li:hover ul:hover {height: 120px; }
+
+    h1 {font-family: 'Open Sans Condensed', sans-serif;}
+
+    mySlides {display: none;}
+
+    body .slide-content img {margin-top: 150px; margin-left: auto; margin-right: auto; width: 700px; height: 500px;}
+
+    body .slide-content .bt { margin-left:750px; margin-top: 25px; }
+    body .slide-content .bt button {border-radius: 20px; background-color: #fafafa;}
+
+    body .headline {text-align: center; font-size: 40px; margin-top: 200px; font-family: 'Nanum Pen Script', cursive; background-color: #fafafa; color:#555; }
+    .like {width: 100px; margin-left: 440px; }
+    
+    body .like i{ font-size:40px; }
+    body .like i:hover {color: red;}
+    body .crud {padding-left: 440px; font-family: 'Gamja Flower', cursive; font-size: 20px;}
+    body #txt {float:right;  font-size: 30px; font-family: 'Mansalva', cursive; }
+    .content img {width: 750px; height: 550px; margin-left: auto; margin-right: auto; margin-top: 150px;}
+    .content h3 {text-align: center; font-family:'Roboto Mono', monospace; font-size: 20px;}
+    .content i {font-size: 40px; padding-left: 750px;}
     }
     </style>
 </head>
 <body onload="startTime()">
   <div id="txt" ></div>
-   <a href="../0923/home.html"> <h1 style="font-family: 'Varela Round', sans-serif;" >Seok Ki portfolio </h1></a>
+   <a href="../0923/0923.html"> <h1 style="font-family: 'Varela Round', sans-serif;" >Seok Ki portfolio </h1></a>
 
     <div class="menubar">
         <ul>
-      <li>  <a href="../0923/home.html" ><i class="fa fa-home">Home</i></a> </li>
-      <li>  <a href="../0923/about.html" id="about"><i class="fa fa-address-card"></i>About</a>
+      <li>  <a href="#" ><i class="fa fa-home">Home</i></a> </li>
+      <li>  <a href="about.html" id="about"><i class="fa fa-address-card"></i>About</a>
         <ul>
          <li><a href="#">Block chain</a></li>
          <li><a href="#">Web Publisher</a></li>
         </ul>
       </li>
-        <li><a href="../0923/caculator.html"><i class="fa fa-calculator"></i>Caculator</a></li>
-        <li><a href="../0923/information.html"><i class="fa fa-info-circle"></i>Information</a></li>
+        <li><a href="caculator.html"><i class="fa fa-calculator"></i>Caculator</a></li>
+        <li><a href="information.html"><i class="fa fa-info-circle"></i>Information</a></li>
         <div class="login">
-                <a href="../0923/login.html">Login</a>
+                <a href="login.html">Login</a>
                </div>
             </ul>
     </div>
     
+
+
+    <div class="content">
+        <i class="fa fa-cubes"></i>      
+        <h3>-Block chain & Web publisher-</h3>
+       
+        <img src="../myhome/img/webdesign_banner.jpg" onmouseover="this.src='../myhome/img/test3de.png'" onmouseout="this.src='webdesign_banner.jpg'" " >
+        
+        <img src="blockchain_banner.fw.png" onmouseover="this.src='../myhome/img/test4de.png'" onmouseout="this.src='blockchain_banner.fw.png'" >
+    </div>
+        
+
+<!-- 슬라이드쇼 구현 -->
+<h2 class="headline">감성'stagram</h2>
+       <div class="slide-content">
+         <img class="mySlides" src="../myhome/img/news1.jpg" >
+         <img class="mySlides" src="../myhome/img/news2.jpg" >
+         <img class="mySlides" src="../myhome/img/news3.jpg"  >
+         <img class="mySlides" src="../myhome/img/news4.jpg" >
+         <div class="bt">        
+        <button class="slide-button-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="slide-button-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
     
 
-<!-- 시계 설정 -->
+
+       </div>
+       <div class="like">
+       <a href="#"><i class="fa fa-heart" style="color: #BDBDBD;" ></i></a>
+      <a href=""><i class="fa fa-comment" style="color:#BDBDBD;"></i></a>      
+    </div>
+    <p class="crud">"후회하기 싫으면 그렇게 살지 말고"<br>
+       "그렇게 살거면 후회하지 마라"<br>
+       <br>
+       #감성#좋은글귀#청춘명언#20대#후회
+    </p>
+
 <script>
+  
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs (slideIndex += n);
+  }
+
+  function showDivs(n) {
+var i;
+var x = document.getElementsByClassName("mySlides");
+if (n > x.length) {slideIndex = 1}
+if (n < 1) {slideIndex = x.length}
+for (i=0; i<x.length; i++) {
+  x[i].style.display = "none";
+}
+x[slideIndex-1].style.display="block";
+} 
+
 function startTime() {
       var today = new Date();
   var h = today.getHours();
