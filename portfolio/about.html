@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap&subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+    .menubar {border: 1px solid#f1f1f1; background-color: gainsboro; height: 60px; margin-top: 70px;  }
+    .menubar a {text-decoration: none; font-size: 28px; margin-right: 38px; font-family: 'Varela Round', sans-serif; color: #555; padding:18px 19px 10px; }
+    .login {float:right;}
+    a:hover {background-color: lightcyan; }
+     
+    .sns {border: 1px solid#f1f1f1; text-align: center; background-color: #fafafa; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: #555; } 
+   
+    .sns a {font-size: 25px; text-decoration: none; margin: 50px; color:#555;}
+    .content {margin-top: 50px;}
+
+    .menubar li ul {display: none; }
+    
+    .menubar li:hover ul {display: block; width: 200px; background-color: gainsboro; position: absolute; z-index: 10; left:185px; top:190px; margin-bottom: 10px; }
+
+    .menubar ul li {float:left;}
+    
+    .menubar li:hover ul a {font-size: 18px; margin-top: 50px;}
+
+    .menubar li:hover ul:hover {height: 120px; }
+
+    h1 {font-family: 'Open Sans Condensed', sans-serif;}
+
+    mySlides {display: none;}
+
+    body .slide-content img {margin-top: 150px; margin-left: auto; margin-right: auto; width: 700px; height: 500px;}
+
+    body .slide-content .bt { margin-left:750px; margin-top: 25px; }
+    body .slide-content .bt button {border-radius: 20px; background-color: #fafafa;}
+
+    body .headline {text-align: center; font-size: 40px; margin-top: 200px; font-family: 'Nanum Pen Script', cursive; background-color: #fafafa; color:#555; }
+    .like {width: 100px; margin-left: 440px; }
+    
+    body .like i{ font-size:40px; }
+    body .like i:hover {color: red;}
+    body .crud {padding-left: 440px; font-family: 'Gamja Flower', cursive; font-size: 20px;}
+    body #txt {float:right;  font-size: 30px; font-family: 'Mansalva', cursive; }
+    .content img {width: 750px; height: 550px; margin-left: auto; margin-right: auto; margin-top: 150px;}
+    .content h3 {text-align: center; font-family:'Roboto Mono', monospace; font-size: 20px;}
+    @media (max-width: 560px) {
+      
+    }
+    </style>
+</head>
+<body onload="startTime()">
+  <div id="txt" ></div>
+   <a href="home.html"> <h1 style="font-family: 'Varela Round', sans-serif;" >Seok Ki portfolio </h1></a>
+
+    <div class="menubar">
+        <ul>
+      <li>  <a href="home.html" ><i class="fa fa-home">Home</i></a> </li>
+      <li>  <a href="about.html" id="about"><i class="fa fa-address-card"></i>About</a>
+        <ul>
+         <li><a href="#">Block chain</a></li>
+         <li><a href="#">Web Publisher</a></li>
+        </ul>
+      </li>
+        <li><a href="caculator.html"><i class="fa fa-calculator"></i>Caculator</a></li>
+        <li><a href="information.html"><i class="fa fa-info-circle"></i>Information</a></li>
+        <div class="login">
+                <a href="login.html">Login</a>
+               </div>
+            </ul>
+    </div>
+    
+    
+
+<!-- 시계 설정 -->
+<script>
+function startTime() {
+      var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+
+
+    </div>
+        <br>
+        <br>
+        <br>
+        <div class="sns">
+          <h2>SNS</h2>
+          <a href=""><i class="fa fa-instagram"></i></a>
+          
+          <a href=""><i class="fa fa-comments"></i></a>
+
+          <a href=""><i class="fa fa-facebook-f"></i></a>
+
+          <a href=""><i class="fa fa-youtube"></i></a>
+
+
+        </div>
+       
+        <div style="font-family: 'Gamja Flower'" >
+         <p>TEL:010-4163-5841</p>
+         <a href="#"><i class="fa fa-instagram">suuuuuucki</i></a>
+        </div>
+       
+
+   
+</body>
+</html>

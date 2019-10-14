@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap&subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+    .menubar {border: 1px solid#f1f1f1; background-color: gainsboro; height: 60px; margin-top: 70px;  }
+    .menubar a {text-decoration: none; font-size: 28px; margin-right: 38px; font-family: 'Varela Round', sans-serif; color: #555; padding:18px 19px 10px; }
+    .login {float:right;}
+    a:hover {background-color: lightcyan; }
+     
+    .sns {border: 1px solid#f1f1f1; text-align: center; background-color: #fafafa; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: #555; } 
+   
+    .sns a {font-size: 25px; text-decoration: none; margin: 50px; color:#555;}
+    .content {margin-top: 50px;}
+
+    .menubar li ul {display: none; }
+    
+    .menubar li:hover ul {display: block; width: 200px; background-color: gainsboro; position: absolute; z-index: 10; left:185px; top:190px; margin-bottom: 10px; }
+
+    .menubar ul li {float:left;}
+    
+    .menubar li:hover ul a {font-size: 18px; margin-top: 50px;}
+
+    .menubar li:hover ul:hover {height: 120px; }
+
+    h1 {font-family: 'Open Sans Condensed', sans-serif;}
+
+    mySlides {display: none;}
+
+    body .slide-content img {margin-top: 150px; margin-left: auto; margin-right: auto; width: 700px; height: 500px;}
+
+    body .slide-content .bt { margin-left:750px; margin-top: 25px; }
+    body .slide-content .bt button {border-radius: 20px; background-color: #fafafa;}
+
+    body .headline {text-align: center; font-size: 40px; margin-top: 200px; font-family: 'Nanum Pen Script', cursive; background-color: #fafafa; color:#555; }
+    .like {width: 100px; margin-left: 440px; }
+    
+    body .like i{ font-size:40px; }
+    body .like i:hover {color: red;}
+    body .crud {padding-left: 440px; font-family: 'Gamja Flower', cursive; font-size: 20px;}
+    body #txt {float:right;  font-size: 30px; font-family: 'Mansalva', cursive; }
+    .content img {width: 750px; height: 550px; margin-left: auto; margin-right: auto; margin-top: 150px;}
+    .content h3 {text-align: center; font-family:'Roboto Mono', monospace; font-size: 20px;}
+    @media (max-width: 560px) {}
+    body .calc {
+        width: 320px;
+    height: 600px;
+    background-image: url("../../myhome/img/ip.fw.png");
+     background-size: 700px 650px;
+     margin-left: 300px;
+     padding-top: 76px;
+     padding-left: 3px;
+     }
+
+    table {border-collapse:collapse;
+        margin-left: auto;
+        margin-right: auto;
+        width: 285px;
+        height: 480px;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 550px;
+    }
+
+    td {background-color: #D8D8D8;
+    border: 1px solid#fafafa;
+    font-family:'Nanum Pen Script', cursive;
+    font-size: 25px;}
+
+    body .deco img {width: 700px; height: 700px; margin-left: 320px; }
+
+    td:hover {background-color: orange;}
+
+    body #History {width: 400px;
+         height: 450px;
+          border: 1px solid#555;
+          border-radius: 7px;
+           background-color:#F1F8E0;
+            float:right;
+           margin-right: 300px;
+           
+          
+        }
+        body .calcex {width:1300px;
+        height: 200px;
+        border: 8px solid#f1f1f1;
+        border-radius: 3px;
+        margin-left: auto; margin-right: auto;
+        text-align: center;
+        font-family:'Nanum Pen Script', cursive;
+        font-size: 25px;
+        margin-bottom: 50px;
+        }
+        
+    
+    </style>
+</head>
+<body onload="startTime()">
+  <div id="txt" ></div>
+   <a href="home.html"> <h1 style="font-family: 'Varela Round', sans-serif;" >Seok Ki portfolio </h1></a>
+
+    <div class="menubar">
+        <ul>
+      <li>  <a href="home.html" ><i class="fa fa-home">Home</i></a> </li>
+      <li>  <a href="about.html" id="about"><i class="fa fa-address-card"></i>About</a>
+        <ul>
+         <li><a href="#">Block chain</a></li>
+         <li><a href="#">Web Publisher</a></li>
+        </ul>
+      </li>
+        <li><a href="caculator.html"><i class="fa fa-calculator"></i>Caculator</a></li>
+        <li><a href="information.html"><i class="fa fa-info-circle"></i>Information</a></li>
+        <div class="login">
+                <a href="login.html">Login</a>
+               </div>
+            </ul>
+    </div>
+    
+    <h1 style="text-align: center; font-family:'Nanum Pen Script', cursive;" ><i class="fa fa-calculator"></i> My Caculator</h1>
+    <div class="back">
+    
+      
+    </div>
+    <p id="History" style="font-family:'Nanum Pen Script', cursive; font-size: xx-large">이곳에 히스토리가 기록됩니다.</p>
+    <div class="calc">
+        <table border="1">
+     
+    
+    <tr>
+    <td colspan="4">
+    <input type="text" id="display" placeholder="계산할 값을 입력해주세요." style="font-size: large">
+    </td>
+    </tr>
+    <tr>
+    <td colspan="4">
+    <input type="text" id="result" placeholder="결과가 출력됩니다." style="font-size: large" >
+    </td>
+    </tr>
+    <tr>
+    <td colspan="3" onclick="reset()">AC</td>
+    <td onclick="add('/')">÷</td>
+    </tr>
+    <tr>
+    <td onclick="add(7)">7</td>
+    <td onclick="add(8)">8</td>
+    <td onclick="add(9)">9</td>
+    <td onclick="add('*')">*</td>
+    </tr>
+    <tr>
+    <td onclick="add(4)">4</td>
+    <td onclick="add(5)">5</td>
+    <td onclick="add(6)">6</td>
+    <td onclick="add('-')">-</td>
+    </tr>
+    <tr>
+        <td onclick="add(1)">1</td>
+        <td onclick="add(2)">2</td>
+        <td onclick="add(3)">3</td>
+        <td onclick="add('+')">+</td>
+    </tr>
+    <tr>
+    <td colspan="2">0</td>
+    <td onclick="add('.')">.</td>
+    <td onclick="calculate('=')">=</td>
+    
+    </tr>
+    <td colspan="4" onclick="History()">Save History</td>
+    
+    </table>
+    </div>
+    
+    <div class="calcex">
+        <h3>계산기 설명</h3>
+        <p>+, -, x, ÷ 기본적인 사칙연산 가능<br>
+            AC(AllClear)를 통해 계산내용 지우기가능<br>
+            SaveHistory을 통해 자신이 자신이 계산한 내용저장
+        </p>
+    </div>
+    
+    <script>
+        var display="";
+        var result="";
+        var x="";
+        var y="";
+    function add(char) {
+    var display=document.getElementById('display'); //식을 입력할 input태그를 불러옴.
+    display.value = display.value + char; 
+    x=display.value;  //add함수의 역할=식뒤에 내가누른 숫자나 기호를 추가해줌.
+    //input태그는 value라는 속성에 저장됨 document.getElementById('display')=<input>태그를 불러오는 코드이고 .value를 붙임으로서
+    // <input>태그의 값을 가져온다.
+    }
+    function calculate() {
+    var display = document.getElementById('display');
+    var result = eval(x); //식을 계산하고 result변수에 저장합니다.
+    document.getElementById('result').value = result;   
+    y=result;   //?
+    }
+    function reset() {
+    display1 = document.getElementById('display').value="";
+    display2 = document.getElementById('result').value="";
+    }
+    var SaveHistory =[];
+    function History() {
+        
+    var History = document.getElementById('History');
+    var pr=x;
+    var rs=y;
+    SaveHistory +=pr+"="+rs+"<br>"
+    History.innerHTML=SaveHistory;
+    
+    }
+    
+    </script>
+
+
+<!-- 시계 설정 -->
+<script>
+function startTime() {
+      var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+
+
+    </div>
+        <br>
+        <br>
+        <br>
+        <div class="sns">
+          <h2>SNS</h2>
+          <a href=""><i class="fa fa-instagram"></i></a>
+          
+          <a href=""><i class="fa fa-comments"></i></a>
+
+          <a href=""><i class="fa fa-facebook-f"></i></a>
+
+          <a href=""><i class="fa fa-youtube"></i></a>
+
+
+        </div>
+       
+        <div style="font-family: 'Gamja Flower'" >
+         <p>TEL:010-4163-5841</p>
+         <a href="#"><i class="fa fa-instagram">suuuuuucki</i></a>
+        </div>
+       
+
+   
+</body>
+</html>
