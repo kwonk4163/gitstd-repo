@@ -1,0 +1,49 @@
+body img {width: 200px; 
+    height: 180px;
+    float: right;
+    margin-top: 80px;
+    margin-right: 60px;
+    }
+    /* 우측 메인로고 */
+
+.join_box {width: 700px; 
+height: 600px; 
+border:1px solid#f1f1f1; 
+margin-left: auto; 
+margin-right: auto;
+margin-top: 400px;
+margin-bottom: 250px;}   
+/* 회원가입 박스 */
+
+.join_box .input_box {width:660px; 
+    margin-left: 35px; 
+    margin-top: 20px; 
+    font-family: 'Asap', sans-serif;  }
+/* 인풋박스 */
+
+.join_box .input_box input {margin: 20px; 
+    height: 22px; border-radius: 5px;
+     border:2px solid#A46943; }
+/*  */
+
+.join_box .btn {margin-left: 20px;}
+
+.join_box .btn button{width: 110px; 
+    height: 50px;
+     margin:15px;
+      background-color:#A46943;
+       border-radius: 5px;
+        border: none;
+         margin-top: 60px;
+        font-size: 15px;
+        color: white;}
+/*  */
+
+.join_box .top h2 {margin-top: 80px;
+     margin-left: 20px; 
+     font-family: 'Asap', sans-serif; 
+     font-size: 30px;
+}
+/* 상단 로고 */
+
+.join_box .top img {width: 50px; height: 50px; float: left; margin-top: -60px; margin-left: 20px;}

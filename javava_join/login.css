@@ -1,0 +1,45 @@
+.login_box {width: 600px; 
+    height: 500px;
+    border: 1px solid#E6E6E6;
+margin-left: auto;
+margin-right: auto;
+margin-top: 350px;
+margin-bottom: 300px;}
+/* 로그인박스 */
+
+.login_box .input_box  {margin-left: 90px;
+margin-top: 100px; 
+font-family:  'Heebo', sans-serif; 
+font-size: 25px;
+}
+/* 인풋박스 */
+
+.login_box .input_box input {width: 250px; 
+    height: 40px; 
+    border-radius: 5px; }
+    /* 인풋창 설정 */
+
+
+.input_box button {width: 410px; 
+    height: 50px;
+    margin-top: 18px; 
+    border-radius: 5px;
+    background-color: #A46943;
+    border: none;
+    font-size: 25px;
+    color: #fafafa;}
+    /* 버튼 */
+ 
+.login_box .guide {margin-left: 120px; margin-top: 50px;}
+/* 로그인박스 안내말 */
+
+.login_box .guide img {width: 50px; height: 50px; margin-left: 140px;}
+/* 로그인박스 자바바이미지 */
+
+.new_account { margin-top: 150px;
+              text-decoration: none;  }
+.new_account a {font-size: 20px; color: #A46943;}      
+.new_account a:hover {color:#58ACFA;}
+/* 하단 */
+
+
